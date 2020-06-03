@@ -1,0 +1,88 @@
+﻿<Window x:Class="WpfApp3.Reference"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="" Width="auto">
+
+    <Grid>
+
+        <Grid RenderTransformOrigin="0.161,0.324">
+            <Grid Background="AliceBlue"/>
+        </Grid>
+        <Grid Width="200" HorizontalAlignment="Left" Background="DodgerBlue" Opacity="0.9" />
+
+        <Label Grid.Row="0" VerticalAlignment="Top" FontFamily="Segoe UI Black" 
+        FontWeight="Bold" FontSize="18" Foreground="#0066cc" Margin="205,0,42,0" Content="Reference" RenderTransformOrigin="0.498,0.612" Height="32"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="47*"/>
+                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition Width="736*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="2" Margin="200,30,0,1" TextWrapping="Wrap" HorizontalAlignment="Left" Width="287">
+                [characters]	Matches any character found in characters.	<LineBreak />
+                [^characters]	Matches any character not found in characters.<LineBreak />
+                [first-last]	Matches any character in the range of characters from first to last.<LineBreak />
+                .	Wildcard. Matches any character except \n.	<LineBreak />
+                \p{category}	Matches any character in a category of unicode characters, specified by category. To see what you can use for category, check out the supported unicode general categories and the supported named blocks.	<LineBreak />
+                \P{category}	Matches any character not in a category of unicode characters, specified by category. To see what you can use for category, check out the supported unicode general categories and the supported named blocks.	<LineBreak />
+                \w	Matches any letter, decimal digit, or an underscore.	<LineBreak />
+                \W	Matches any character except a letter, decimal digit, or an underscore.<LineBreak />
+                \s	Matches any white-space character.	<LineBreak />
+                \S	Matches any character except a white-space character.	<LineBreak />
+                \d	Matches any decimal digit.	<LineBreak />
+                \D	Matches any character except a decimal digit.<LineBreak />
+                \r	Matches a carriage return.	<LineBreak />
+            \n	Matches a newline.	<LineBreak />
+            \t	Matches a tab.	<LineBreak />
+            [\b]	Matches a backspace. Note that it must be enclosed in brackets to have this meaning.	<LineBreak />
+            \f	Matches a form feed.	<LineBreak />
+            \e	Matches an escape.	<LineBreak />
+            \v	Matches a vertical tab.	<LineBreak />
+            \a	Matches the bell character.	<LineBreak />
+            \octal	Matches a character, where octal is the octal representation of that character.	<LineBreak />
+            \xhex	Matches a character, where hex is the two digit hexadecimal representation of that character.	<LineBreak />
+            \uunicode	Matches a unicode character, where unicode is the four digit hexadecimal representation of that unicode character.	<LineBreak />
+            \ccharacter	Matches an ASCII control character specified by character.<LineBreak />
+            ^	Matches the beginning of the input.	<LineBreak />
+            $	Matches the end of the input, or the point before a final \n at the end of the input.	<LineBreak />
+            \A	Matches the beginning of the input. Identical to ^, except it is unaffected by the multiline option.	<LineBreak />
+            </TextBlock>
+            
+            <TextBlock Grid.Column="2" Margin="487,30,0,1" TextWrapping="Wrap" HorizontalAlignment="Left" Width="287" >
+ \Z	Matches the end of the input, or the point before a final \n at the end of the input. Identical to $, except it is unaffected by the multiline option.	<LineBreak />
+\z	Matches the end of the input, without exception.	<LineBreak />
+\G	Matches the point that the previous match ended. Used to find contiguous matches.	<LineBreak />
+\b	Matches any word boundary. Specifically, any point between a \w and a \W.	<LineBreak />
+\B	Matches any point that is not a word boundary. Specifically, any point not between a \w and a \W.<LineBreak />
+(subpattern)	Captures subpattern as an unnamed group.	<LineBreak />
+*	Matches previous element zero or more times.	<LineBreak />
++	Matches previous element one or more times.	<LineBreak />
+?	Matches previous element zero or one times.	<LineBreak />
+{n}	Matches previous element exactly n times.	<LineBreak />
+{n,}	Matches previous element at least n times.	<LineBreak />
+{n,m}	Matches previous element at least n times and at most m times.	<LineBreak />
+*?	Matches previous element zero or more times, but as few times as possible.	<LineBreak />
++?	Matches previous element one or more times, but as few times as possible.	<LineBreak />
+??	Matches previous element zero or one times, but as few times as possible.	<LineBreak />
+{n,}?	Matches previous element at least n times, but as few times as possible.	<LineBreak />
+{n,m}?	Matches previous element at least n times and at most m times, but as few times as possible.<LineBreak />
+\number	Matches the value of a previously captured group, specified by number.	<LineBreak />
+|	Functions as a logical or. Matches any elements that it separates.	<LineBreak />
+(?(subpattern)yes|no)	Treats subpattern as a zero-width assertion to check if it matches. If so, attempts to match with the yes subpattern. Otherwise, tries the no subpattern. The |no part is optional.	<LineBreak />
+(?(group)yes|no)	Checks if a previously defined group was succesfully captured, specified by group, which can be a number or a name for a named group. If so, attempts to match with the yes subpattern. Otherwise, tries the no subpattern. The |no part is optional. <LineBreak />
+$number	Substitutes the value of a group, specified by number.	<LineBreak />
+${name}	Substitutes the value of a named group, specified by name.	<LineBreak />
+$$	Substitutes the $ character.	<LineBreak />
+$`	Substitutes all input text found before the match.	<LineBreak />
+$'	Substitutes all input text found after the match.	<LineBreak />
+            </TextBlock>
+        </Grid>
+        <Button  Margin="0,137,0,163" Width="200" Height="50" HorizontalAlignment="Left" FontFamily="Segoe UI Black" Opacity="0.2" FontSize="18" Content="Reference"/>
+        <Button  Margin="0,79,0,221" Width="200" Height="50" HorizontalAlignment="Left" FontFamily="Segoe UI Black" Opacity="0.2" FontSize="18" Content="Tester" Click="OpenWindow"/>
+    </Grid>
+</Window>
